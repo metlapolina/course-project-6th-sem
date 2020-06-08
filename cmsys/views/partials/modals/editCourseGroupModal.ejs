@@ -1,0 +1,30 @@
+<div id="editModal" class="modal fade mt-5" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Course Group</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form id="editCourseGroup" method="post">
+                <div class="modal-body ml-3">
+                    <input type="hidden" id="id">
+                    <div class="form-group col-12 row">
+                        <label for="title" class="col-form-label col-3">Title:</label>
+                        <input type="text" class="form-control col-6" id="title" placeholder="Title" required>
+                        <img id="cover" class="col-3" width="50px" height="35px">
+                    </div>
+                    <div class="form-group col-12 row">
+                        <label for="cover" class="col-form-label col-3 pr-0">Cover:</label>
+                        <div class="col-8">
+                            <input type="file" id="newCover" class="filepond">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

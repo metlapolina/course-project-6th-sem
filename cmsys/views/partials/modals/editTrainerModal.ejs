@@ -1,0 +1,41 @@
+<div id="editModal" class="modal fade mt-5" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Trainer</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form id="editTrainer" method="post">
+                <div class="modal-body ml-3">
+                    <input type="hidden" id="id">
+                    <input type="hidden" id="userId">
+                    <div class="form-group col-12 row">
+                        <label for="lastName" class="col-form-label col-3">Full Name:</label>
+                        <input type="text" class="form-control col-4 mr-1" id="lastName" placeholder="Last Name" required>
+                        <input type="text" class="form-control col-4" id="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group col-12 row">
+                        <label for="email" class="col-form-label col-3">Email:</label>
+                        <input type="email" class="form-control col-8" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group col-12 row">
+                        <label for="position" class="col-form-label col-3">Position:</label>
+                        <input type="text" class="form-control col-8" id="position" placeholder="Position" required>
+                    </div>
+                    <div class="form-group col-12 row">
+                        <label for="department" class="col-form-label col-3 pr-0">Department:</label>
+                        <input type="text" class="form-control col-8" id="department" placeholder="Department" required>
+                    </div>
+                    <div class="form-group col-12 row">
+                        <label for="info" class="col-form-label col-3">Info:</label>
+                        <textarea class="form-control col-8" style="height: 100px;" id="info" placeholder="Enter info..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="mx-4">
+    <h2 class="display-4">Courses</h2>
+    <form action="/courses" method="get" class="mt-2 offset-8 col-4">
+        <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" placeholder="Search" name="title" value="<%= searchOptions.title %>">
+        </div>
+    </form>
+</div>
+<div class="courses">
+    <% courses.forEach(course=>{ %>
+        <div class="card mb-3" style="width: 300px; height: 200px;">
+            <div class="row no-gutters" style="background-image:linear-gradient(to bottom right, rgb(0, 0, 0), rgba(255, 255, 255, 0.2)), url('<%= course.group.coverImagePath %>'); background-size: cover; height: 200px;">
+                <div class="w-100">
+                    <div class="card-body h-100">
+                        <h5 class="card-title text-white h-25">
+                            <%= course.title %>
+                        </h5>
+                        <p class="card-text text-white h-50">
+                            <a href="courses/<%= course.id %>">
+                                Additional Info
+                            </a>
+                        </p>
+                        <p class="card-text offset-4"><small class="text-white">Created at <%= course.createdAt.toDateString() %></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+</div>

@@ -1,0 +1,28 @@
+<div id="addModal" class="modal fade mt-5" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Course Group</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form id="addCourseGroup" method="post" action="/courseGroups">
+                <div class="modal-body ml-3 pb-3">
+                    <div class="form-group col-12 row">
+                        <label for="title" class="col-form-label col-3">Title:</label>
+                        <input type="text" class="form-control col-8" id="addTitle" placeholder="Title" required>
+                    </div>
+                    <div class="form-group col-12 row">
+                        <label for="cover" class="col-form-label col-3 pr-0">Cover:</label>
+                        <div class="col-8">
+                            <input type="file" id="addCover" class="filepond">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

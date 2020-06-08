@@ -1,0 +1,34 @@
+<div id="addModal" class="modal fade mt-5" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Trainer</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <form id="addTrainer" method="post" action="/trainers">
+                <div class="modal-body ml-3">
+                    <div class="form-group col-12 row">
+                        <label for="lastName" class="col-form-label col-3">User:</label>
+                        <select class="form-control col-8" id="users"></select>
+                    </div>
+                    <div class="form-group col-12 row">
+                        <label for="position" class="col-form-label col-3">Position:</label>
+                        <input type="text" class="form-control col-8" id="addPosition" placeholder="Position" required>
+                    </div>
+                    <div class="form-group col-12 row">
+                        <label for="department" class="col-form-label col-3 pr-0">Department:</label>
+                        <input type="text" class="form-control col-8" id="addDepartment" placeholder="Department" required>
+                    </div>
+                    <div class="form-group col-12 row">
+                        <label for="info" class="col-form-label col-3">Info:</label>
+                        <textarea class="form-control col-8" style="height: 100px;" id="addInfo" placeholder="Enter info..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<p class="display-4">Recently Added</p>
+<% courses.forEach(course => { %>
+    <div class="card">
+        <div class="card-img" style="background-image:url('<%= course.group.coverImagePath %>');">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <a href="/courses/<%= course.id %>">View Course</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-content">
+            <a href="/courses/<%= course.id %>">
+                <h2>
+                    <%= course.title %>
+                </h2>
+                <p>
+                    <%= course.group.title %>,
+                        <%= course.type %>
+                </p>
+            </a>
+        </div>
+    </div>
+    <% }) %>

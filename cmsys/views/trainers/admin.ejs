@@ -1,0 +1,29 @@
+<h1>Trainers</h1>
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-1 offset-11 text-right pr-0 mr-0 mb-3">
+            <a data-toggle="modal" data-target="#addModal" class="add btn-sm btn-dark mb-4 px-3 text-white"><i class="fa fa-plus"></i></a>
+        </div>
+    </div>
+</section>
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Photo</th>
+            <th style="width: 170px;">Name</th>
+            <th>Position</th>
+            <th>Department</th>
+            <th>Info</th>
+            <th style="width: 150px;">Action</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+</table>
+
+<%- include('../partials/modals/editTrainerModal.ejs') %>
+    <%- include('../partials/modals/addTrainerModal.ejs') %>
+        <%- include('../partials/modals/deleteModal.ejs') %>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="/js/api/apiTrainers.js"></script>

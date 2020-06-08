@@ -1,0 +1,51 @@
+<section style="background: url('<%= course.group.coverImagePath %>') no-repeat; background-size: 100%;">
+    <div class="card-body text-white text-center py-5 px-5 mt-5">
+        <h1 class="pb-4" style="font-size:8vw;">
+            <strong><%= course.title %></strong>
+        </h1>
+    </div>
+</section>
+<article class="mx-5 px-5 pt-0" style="background-color: #d0d8e273;">
+    <div class="row w-100 pt-4">
+        <div class="col-4 text-center">
+            <i class="far fa-heart" style="font-size: 60px; color: white;"></i>
+            <h4>Group</h4>
+            <a>
+                <span><%= course.group.title %></span>
+            </a>
+        </div>
+        <div class="col-4 text-center">
+            <i class="fas fa-chalkboard-teacher" style="font-size: 60px; color: white;"></i>
+            <h4>Trainer</h4>
+            <a href="#" data-url="/trainers/<%= course.trainer.id %>" class="info">
+                <span><%= course.trainer.user.fullName %></span>
+            </a>
+        </div>
+        <div class="col-4 text-center">
+            <i class="fas fa-check" style="font-size: 60px; color: white;"></i>
+            <h4>Type</h4>
+            <span><%= course.type %></span>
+        </div>
+    </div>
+    <div class="container px-5 my-5 pb-5">
+        <div class="col-12">
+            <%= course.info %>
+        </div>
+        <div class="row pt-2">
+            <div class="col-4">
+                <form id="like-course">
+                    <button type="submit" id="like" class="border-0 btn"><i class="fas fa-thumbs-up"></i></button>
+                    <i id="like-count"><%= course.likeCount == null ? 0 : course.likeCount %></i>
+                </form>
+            </div>
+            <div class="offset-4 col-4">
+                <i>Created at <%= course.createdAt.toDateString() %></i>
+            </div>
+        </div>
+    </div>
+</article>
+
+<%- include('../partials/modals/infoTrainerModal.ejs') %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/api/apiTrainers.js"></script>
